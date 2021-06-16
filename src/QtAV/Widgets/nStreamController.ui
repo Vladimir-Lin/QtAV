@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nStreamController</class>
+ <widget class="QWidget" name="nStreamController">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>48</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>48</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>48</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Stream Controller</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Images/CIOS.qrc">
+    <normaloff>:/images/playercontrol.png</normaloff>:/images/playercontrol.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Stream Controller</string>
+  </property>
+  <property name="statusTip">
+   <string>Stream Controller</string>
+  </property>
+  <property name="whatsThis">
+   <string>Stream Controller</string>
+  </property>
+  <widget class="QToolButton" name="Menu">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Menu</string>
+   </property>
+   <property name="whatsThis">
+    <string>Menu</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="popupMode">
+    <enum>QToolButton::InstantPopup</enum>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonFollowStyle</enum>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Previous">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>48</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Previous</string>
+   </property>
+   <property name="statusTip">
+    <string>Previous</string>
+   </property>
+   <property name="whatsThis">
+    <string>Previous</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/moveLeft.png</normaloff>:/images/moveLeft.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Backward">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Backward</string>
+   </property>
+   <property name="statusTip">
+    <string>Backward</string>
+   </property>
+   <property name="whatsThis">
+    <string>Backward</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/PlayPrev.png</normaloff>:/images/PlayPrev.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Play">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Play or Pause</string>
+   </property>
+   <property name="statusTip">
+    <string>Play or Pause</string>
+   </property>
+   <property name="whatsThis">
+    <string>Play or Pause</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/PlayerPlay.png</normaloff>
+     <activeon>:/images/PlayPause.png</activeon>:/images/PlayerPlay.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Stop">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>192</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Stop</string>
+   </property>
+   <property name="statusTip">
+    <string>Stop</string>
+   </property>
+   <property name="whatsThis">
+    <string>Stop</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/StopPlay.png</normaloff>:/images/StopPlay.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Forward">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Forward</string>
+   </property>
+   <property name="statusTip">
+    <string>Forward</string>
+   </property>
+   <property name="whatsThis">
+    <string>Forward</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/PlayNext.png</normaloff>:/images/PlayNext.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Next">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>288</x>
+     <y>0</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Next</string>
+   </property>
+   <property name="statusTip">
+    <string>Next</string>
+   </property>
+   <property name="whatsThis">
+    <string>Next</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/images/moveRight.png</normaloff>:/images/moveRight.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSlider" name="video">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>20</y>
+     <width>264</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Timestamp</string>
+   </property>
+   <property name="statusTip">
+    <string>Timestamp</string>
+   </property>
+   <property name="whatsThis">
+    <string>Timestamp</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBelow</enum>
+   </property>
+   <property name="tickInterval">
+    <number>30000</number>
+   </property>
+  </widget>
+  <widget class="QSlider" name="Left">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>0</y>
+     <width>120</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Left volume</string>
+   </property>
+   <property name="statusTip">
+    <string>Left volume</string>
+   </property>
+   <property name="whatsThis">
+    <string>Left volume</string>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksAbove</enum>
+   </property>
+   <property name="tickInterval">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QSlider" name="Right">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>24</y>
+     <width>120</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Right volume</string>
+   </property>
+   <property name="statusTip">
+    <string>Right volume</string>
+   </property>
+   <property name="whatsThis">
+    <string>Right volume</string>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBelow</enum>
+   </property>
+   <property name="tickInterval">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Message">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>0</y>
+     <width>144</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Message</string>
+   </property>
+   <property name="statusTip">
+    <string>Message</string>
+   </property>
+   <property name="whatsThis">
+    <string>Message</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Length">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>0</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Length</string>
+   </property>
+   <property name="statusTip">
+    <string>Length</string>
+   </property>
+   <property name="whatsThis">
+    <string>Length</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Time">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>24</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Time</string>
+   </property>
+   <property name="statusTip">
+    <string>Time</string>
+   </property>
+   <property name="whatsThis">
+    <string>Time</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QSlider" name="Opacity">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>0</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Opacity</string>
+   </property>
+   <property name="statusTip">
+    <string>Opacity</string>
+   </property>
+   <property name="whatsThis">
+    <string>Opacity</string>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBothSides</enum>
+   </property>
+   <property name="tickInterval">
+    <number>100</number>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/CIOS.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Left</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nStreamController</receiver>
+   <slot>leftChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>739</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Right</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nStreamController</receiver>
+   <slot>rightChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>739</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Opacity</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nStreamController</receiver>
+   <slot>opacityChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>539</x>
+     <y>9</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Play</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>nStreamController</receiver>
+   <slot>Play(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Stop</sender>
+   <signal>clicked()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>Stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Previous</sender>
+   <signal>clicked()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>Previous()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Backward</sender>
+   <signal>clicked()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>Backward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Forward</sender>
+   <signal>clicked()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>Forward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Next</sender>
+   <signal>clicked()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>Next()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>311</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>video</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>nStreamController</receiver>
+   <slot>videoChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>video</sender>
+   <signal>sliderReleased()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>videoReleased()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Menu</sender>
+   <signal>clicked()</signal>
+   <receiver>nStreamController</receiver>
+   <slot>startMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>23</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

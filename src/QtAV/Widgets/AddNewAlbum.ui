@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddNewAlbum</class>
+ <widget class="QWidget" name="AddNewAlbum">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add new album</string>
+  </property>
+  <property name="toolTip">
+   <string>Add a new album</string>
+  </property>
+  <property name="statusTip">
+   <string>Add a new album</string>
+  </property>
+  <property name="whatsThis">
+   <string>Add a new album</string>
+  </property>
+  <widget class="QLineEdit" name="Name">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Album name</string>
+   </property>
+   <property name="statusTip">
+    <string>Album name</string>
+   </property>
+   <property name="whatsThis">
+    <string>Album name</string>
+   </property>
+   <property name="placeholderText">
+    <string>Album name</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Languages">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>28</y>
+     <width>400</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Album name language</string>
+   </property>
+   <property name="statusTip">
+    <string>Album name language</string>
+   </property>
+   <property name="whatsThis">
+    <string>Album name language</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="maxVisibleItems">
+    <number>25</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Details">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>64</y>
+     <width>80</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Edit details</string>
+   </property>
+   <property name="statusTip">
+    <string>Edit details</string>
+   </property>
+   <property name="whatsThis">
+    <string>Edit details</string>
+   </property>
+   <property name="text">
+    <string>Edit details</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Add">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>64</y>
+     <width>80</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Add a new album</string>
+   </property>
+   <property name="statusTip">
+    <string>Add a new album</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add a new album</string>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Cancel">
+   <property name="geometry">
+    <rect>
+     <x>304</x>
+     <y>64</y>
+     <width>80</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Cancel without do anything</string>
+   </property>
+   <property name="statusTip">
+    <string>Cancel without do anything</string>
+   </property>
+   <property name="whatsThis">
+    <string>Cancel without do anything</string>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Details</sender>
+   <signal>clicked()</signal>
+   <receiver>AddNewAlbum</receiver>
+   <slot>EditDetails()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Add</sender>
+   <signal>clicked()</signal>
+   <receiver>AddNewAlbum</receiver>
+   <slot>AddAlbum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>AddNewAlbum</receiver>
+   <slot>CancalAdd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddNewAlbum</receiver>
+   <slot>NameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

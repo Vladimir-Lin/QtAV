@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nVideoStatus</class>
+ <widget class="QWidget" name="nVideoStatus">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Video status</string>
+  </property>
+  <property name="toolTip">
+   <string>Video status</string>
+  </property>
+  <property name="statusTip">
+   <string>Video status</string>
+  </property>
+  <property name="whatsThis">
+   <string>Video status</string>
+  </property>
+  <widget class="QProgressBar" name="AudioBuffer">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Audio buffer size</string>
+   </property>
+   <property name="statusTip">
+    <string>Audio buffer size</string>
+   </property>
+   <property name="whatsThis">
+    <string>Audio buffer size</string>
+   </property>
+   <property name="maximum">
+    <number>20</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="format">
+    <string>%v seconds</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="VideoBuffer">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Video buffer size</string>
+   </property>
+   <property name="statusTip">
+    <string>Video buffer size</string>
+   </property>
+   <property name="whatsThis">
+    <string>Video buffer size</string>
+   </property>
+   <property name="maximum">
+    <number>500</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="format">
+    <string>%v frames</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Close">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>200</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="VideoIndex">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Video Index</string>
+   </property>
+   <property name="statusTip">
+    <string>Video Index</string>
+   </property>
+   <property name="whatsThis">
+    <string>Video Index</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="VideoPending">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Video Pending Index</string>
+   </property>
+   <property name="statusTip">
+    <string>Video Pending Index</string>
+   </property>
+   <property name="whatsThis">
+    <string>Video Pending Index</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FPS">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Next">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Close</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoStatus</receiver>
+   <slot>Close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>371</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

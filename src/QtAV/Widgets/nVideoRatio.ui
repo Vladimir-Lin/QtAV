@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nVideoRatio</class>
+ <widget class="QWidget" name="nVideoRatio">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Video ratio controller</string>
+  </property>
+  <property name="toolTip">
+   <string>Video ratio controller</string>
+  </property>
+  <property name="statusTip">
+   <string>Video ratio controller</string>
+  </property>
+  <widget class="QComboBox" name="R">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Ratio</string>
+   </property>
+   <property name="statusTip">
+    <string>Ratio</string>
+   </property>
+   <property name="whatsThis">
+    <string>Ratio</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="maxVisibleItems">
+    <number>20</number>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="X">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Start X position</string>
+   </property>
+   <property name="statusTip">
+    <string>Start X position</string>
+   </property>
+   <property name="whatsThis">
+    <string>Start X position</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>X : </string>
+   </property>
+   <property name="minimum">
+    <number>-999999</number>
+   </property>
+   <property name="maximum">
+    <number>999999</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="Y">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Start Y position</string>
+   </property>
+   <property name="statusTip">
+    <string>Start Y position</string>
+   </property>
+   <property name="whatsThis">
+    <string>Start Y position</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>Y : </string>
+   </property>
+   <property name="minimum">
+    <number>-999999</number>
+   </property>
+   <property name="maximum">
+    <number>999999</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="W">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Display width</string>
+   </property>
+   <property name="statusTip">
+    <string>Display width</string>
+   </property>
+   <property name="whatsThis">
+    <string>Display width</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>W : </string>
+   </property>
+   <property name="maximum">
+    <number>999999</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="H">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Display height</string>
+   </property>
+   <property name="statusTip">
+    <string>Display height</string>
+   </property>
+   <property name="whatsThis">
+    <string>Display height</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="prefix">
+    <string>H : </string>
+   </property>
+   <property name="maximum">
+    <number>999999</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Close">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>200</y>
+     <width>105</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Aspect">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>48</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Keep aspect</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Close</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoRatio</receiver>
+   <slot>Close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>X</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nVideoRatio</receiver>
+   <slot>Changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Y</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nVideoRatio</receiver>
+   <slot>Changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>W</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nVideoRatio</receiver>
+   <slot>Width(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>H</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nVideoRatio</receiver>
+   <slot>Height(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>R</sender>
+   <signal>activated(int)</signal>
+   <receiver>nVideoRatio</receiver>
+   <slot>Ratio(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

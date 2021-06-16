@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nVideoPanel</class>
+ <widget class="QWidget" name="nVideoPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>384</width>
+    <height>64</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Video control panel</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Images/Branon.qrc">
+    <normaloff>:/images/videos.png</normaloff>:/images/videos.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Video control panel</string>
+  </property>
+  <property name="statusTip">
+   <string>Video control panel</string>
+  </property>
+  <property name="whatsThis">
+   <string>Video control panel</string>
+  </property>
+  <widget class="QComboBox" name="Videos">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>384</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Play lists</string>
+   </property>
+   <property name="statusTip">
+    <string>Play lists</string>
+   </property>
+   <property name="whatsThis">
+    <string>Play lists</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="Time">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>48</y>
+     <width>384</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Time</string>
+   </property>
+   <property name="statusTip">
+    <string>Time</string>
+   </property>
+   <property name="whatsThis">
+    <string>Time</string>
+   </property>
+   <property name="maximum">
+    <number>120</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksAbove</enum>
+   </property>
+   <property name="tickInterval">
+    <number>60000</number>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Play">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Play/Pause</string>
+   </property>
+   <property name="statusTip">
+    <string>Play/Pause</string>
+   </property>
+   <property name="whatsThis">
+    <string>Play/Pause</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/PlayerPlay.png</normaloff>
+     <normalon>:/images/StopPlay.png</normalon>:/images/PlayerPlay.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="FullScreen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Switch full screen</string>
+   </property>
+   <property name="statusTip">
+    <string>Switch full screen</string>
+   </property>
+   <property name="whatsThis">
+    <string>Switch full screen</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/hide.png</normaloff>:/images/hide.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Back">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Slow down</string>
+   </property>
+   <property name="statusTip">
+    <string>Slow down</string>
+   </property>
+   <property name="whatsThis">
+    <string>Slow down</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/PlayPrev.png</normaloff>:/images/PlayPrev.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Fast">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Fast playing</string>
+   </property>
+   <property name="statusTip">
+    <string>Fast playing</string>
+   </property>
+   <property name="whatsThis">
+    <string>Fast playing</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/PlayNext.png</normaloff>:/images/PlayNext.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Normal">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>48</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Normal speed</string>
+   </property>
+   <property name="statusTip">
+    <string>Normal speed</string>
+   </property>
+   <property name="whatsThis">
+    <string>Normal speed</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/PlayPause.png</normaloff>:/images/PlayPause.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Stop">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Stop playing</string>
+   </property>
+   <property name="statusTip">
+    <string>Stop playing</string>
+   </property>
+   <property name="whatsThis">
+    <string>Stop playing</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/grayscale.png</normaloff>:/images/grayscale.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Clear">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Remove all play lists</string>
+   </property>
+   <property name="statusTip">
+    <string>Remove all play lists</string>
+   </property>
+   <property name="whatsThis">
+    <string>Remove all play lists</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/viewmode.png</normaloff>:/images/viewmode.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Delete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Delete from play lists</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete from play lists</string>
+   </property>
+   <property name="whatsThis">
+    <string>Delete from play lists</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/minus.png</normaloff>:/images/minus.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Browse">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Browse video files</string>
+   </property>
+   <property name="statusTip">
+    <string>Browse video files</string>
+   </property>
+   <property name="whatsThis">
+    <string>Browse video files</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/projectobject.png</normaloff>:/images/projectobject.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Next">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Next</string>
+   </property>
+   <property name="statusTip">
+    <string>Next</string>
+   </property>
+   <property name="whatsThis">
+    <string>Next</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/moveRight.png</normaloff>:/images/moveRight.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Export">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>192</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Export play lists</string>
+   </property>
+   <property name="statusTip">
+    <string>Export play lists</string>
+   </property>
+   <property name="whatsThis">
+    <string>Export play lists</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/saveall.png</normaloff>:/images/saveall.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="TimeTable">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>216</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Adjust time table</string>
+   </property>
+   <property name="statusTip">
+    <string>Adjust time table</string>
+   </property>
+   <property name="whatsThis">
+    <string>Adjust time table</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/planner.png</normaloff>:/images/planner.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Database">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Append to video database</string>
+   </property>
+   <property name="statusTip">
+    <string>Append to video database</string>
+   </property>
+   <property name="whatsThis">
+    <string>Append to video database</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/odbc.png</normaloff>:/images/odbc.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Playlist">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>264</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Import from play lists</string>
+   </property>
+   <property name="statusTip">
+    <string>Import from play lists</string>
+   </property>
+   <property name="whatsThis">
+    <string>Import from play lists</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/projectup.png</normaloff>:/images/projectup.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Analysis">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>288</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Video analysis</string>
+   </property>
+   <property name="statusTip">
+    <string>Video analysis</string>
+   </property>
+   <property name="whatsThis">
+    <string>Video analysis</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/symbolquotes.png</normaloff>:/images/symbolquotes.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="User">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>312</x>
+     <y>24</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>User defined function</string>
+   </property>
+   <property name="statusTip">
+    <string>User defined function</string>
+   </property>
+   <property name="whatsThis">
+    <string>User defined function</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/Branon.qrc">
+     <normaloff>:/images/animal.png</normaloff>:/images/animal.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>FullScreen</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>FullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Time</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>TimeMoved(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Back</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Fast</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Fast()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Normal</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Normal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Play</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>State(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>11</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Stop</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Clear</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Browse</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Browse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Delete</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Delete()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Next</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Next()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Export</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Export()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>TimeTable</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>TimeTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Database</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Database()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Playlist</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Playlist()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Analysis</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>Analysis()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>299</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>User</sender>
+   <signal>clicked()</signal>
+   <receiver>nVideoPanel</receiver>
+   <slot>User()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

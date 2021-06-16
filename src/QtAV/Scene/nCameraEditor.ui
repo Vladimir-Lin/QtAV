@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nCameraEditor</class>
+ <widget class="QWidget" name="nCameraEditor">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>256</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>256</width>
+    <height>512</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>256</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Camera editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../Images/Branon.qrc">
+    <normaloff>:/images/videos.png</normaloff>:/images/videos.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Camera editor</string>
+  </property>
+  <property name="statusTip">
+   <string>Camera editor</string>
+  </property>
+  <property name="whatsThis">
+   <string>Camera editor</string>
+  </property>
+  <widget class="QLineEdit" name="Name">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>0</y>
+     <width>232</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Type">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>48</y>
+     <width>256</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Camera types</string>
+   </property>
+   <property name="statusTip">
+    <string>Camera types</string>
+   </property>
+   <property name="whatsThis">
+    <string>Camera types</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="Stacked">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>72</y>
+     <width>256</width>
+     <height>208</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="Perspective">
+    <widget class="QDoubleSpinBox" name="Near">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>0</y>
+       <width>96</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Near</string>
+     </property>
+     <property name="statusTip">
+      <string>Near</string>
+     </property>
+     <property name="whatsThis">
+      <string>Near</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="minimum">
+      <double>-999999999.990000009536743</double>
+     </property>
+     <property name="maximum">
+      <double>999999999.990000009536743</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="Far">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>0</y>
+       <width>96</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Far</string>
+     </property>
+     <property name="statusTip">
+      <string>Far</string>
+     </property>
+     <property name="whatsThis">
+      <string>Far</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="minimum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>999999999.990000009536743</double>
+     </property>
+     <property name="value">
+      <double>100.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="Vectors">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>24</y>
+       <width>256</width>
+       <height>184</height>
+      </rect>
+     </property>
+     <property name="rowCount">
+      <number>3</number>
+     </property>
+     <property name="columnCount">
+      <number>3</number>
+     </property>
+     <row>
+      <property name="text">
+       <string>Eye</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Center</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Up</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QDoubleSpinBox" name="FOV">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>64</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>FOV</string>
+     </property>
+     <property name="statusTip">
+      <string>FOV</string>
+     </property>
+     <property name="whatsThis">
+      <string>FOV</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="decimals">
+      <number>1</number>
+     </property>
+     <property name="minimum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>180.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>60.000000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Orthographic"/>
+   <widget class="QWidget" name="Frustum"/>
+   <widget class="QWidget" name="Matrix"/>
+  </widget>
+  <widget class="QToolButton" name="Save">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../Images/Branon.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Identifier">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>24</y>
+     <width>256</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Identifier</string>
+   </property>
+   <property name="statusTip">
+    <string>Identifier</string>
+   </property>
+   <property name="whatsThis">
+    <string>Identifier</string>
+   </property>
+   <property name="placeholderText">
+    <string>Identifier</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Vectors</sender>
+   <signal>cellChanged(int,int)</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>cameraCell(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Near</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>cameraState(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Far</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>cameraState(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>FOV</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>cameraState(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Identifier</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>nameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>nameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Save</sender>
+   <signal>clicked()</signal>
+   <receiver>nCameraEditor</receiver>
+   <slot>Save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>11</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
